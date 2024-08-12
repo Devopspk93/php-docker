@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: php-service
+  name: php-service1
 spec:
   selector:
     app: php-project
