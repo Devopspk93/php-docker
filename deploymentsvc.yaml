@@ -13,7 +13,7 @@ spec:
         app: php-project
     spec:
       containers:
-      - name: php-project
+      - name: php-app9
         image: devopspk93/php-project
         imagePullPolicy: IfNotPresent
         ports:
