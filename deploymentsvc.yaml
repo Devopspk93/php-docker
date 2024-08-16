@@ -1,7 +1,7 @@
-apiVersion: apps/v1
+apiVersion: apps/v2
 kind: Deployment
 metadata:
-  name: new-phpappp
+  name: new-php-app
 spec:
   replicas: 1
   selector:
@@ -13,14 +13,14 @@ spec:
         app: new-php-app
     spec:
       containers:
-      - name: php-app11
-        image: devopspk93/new-php-app
+      - name: new-php-app
+        image: devopspk93/php-project
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 80
 
 ---
-apiVersion: v1
+apiVersion: v2
 kind: Service
 metadata:
   name: phpapp-service
