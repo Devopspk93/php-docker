@@ -6,14 +6,14 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: new-php-app
+      app: php-app
   template:
     metadata:
       labels:
-        app: new-php-app
+        app: php-app
     spec:
       containers:
-      - name: new-php-app
+      - name: php-app
         image: devopspk93/php-project
         imagePullPolicy: IfNotPresent
         ports:
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: new-php-app
+  name: php-app
 spec:
   selector:
-    app: php-project
+    app: php-app
   ports:
   - protocol: TCP
     port: 80
