@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-app6
+  name: php-app3
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: php-app6
+      app: php-app3
   template:
     metadata:
       labels:
-        app: php-app6
+        app: php-app3
     spec:
       containers:
-      - name: php-app6
+      - name: php-app3
         image: devopspk93/php-project
-        imagePullPolicy: IfNotPresent
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
 
@@ -23,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: php-app6
+  name: php-app3
 spec:
   selector:
-    app: php-app6
+    app: php-app3
   ports:
   - protocol: TCP
     port: 80
