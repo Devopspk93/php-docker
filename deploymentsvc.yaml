@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: php-app5
-        image: devopspk93/php-project
+        image: devopspk93/php-project:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
